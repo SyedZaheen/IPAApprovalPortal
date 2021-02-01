@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom font embedding -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="loginpages.css"">
+
+    <title>IPA Portal - Admin Login</title>
+  </head>
+
+  <body>
+    <!-- Container for the whole page -->
+    <div class="container-fluid bg-color">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-lg-6 mx-auto">
+              <img
+                class="logo pb-5"
+                src="http://www.bdhc.sg/wp-content/themes/bdhc/assets/images/logo.png"
+              />
+              <h2 class="login-heading mb-4">Log in as Administrator</h2>
+              <h5 class="login-heading small mb-4">
+                Not an admin?
+                <a href="loginpageclient.html">Log in as client</a> instead
+              </h5>
+              <form>
+                <div class="form-label-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Username"
+                    id="inputUsername"
+                    required
+                    autofocus
+                  />
+                  <label for="inputUsername">Username</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input
+                    type="password"
+                    id="inputPassword"
+                    class="form-control"
+                    placeholder="Password"
+                    required
+                  />
+                  <label for="inputPassword">Password</label>
+                </div>
+
+                <div class="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="customCheck1"
+                  />
+                  <label class="custom-control-label" for="customCheck1"
+                    >Remember password</label
+                  >
+                </div>
+                <button
+                  class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                  type="submit"
+                >
+                  Sign in
+                </button>
+                <div class="text-center">
+                  <a class="small" href="#">Reset password</a>
+                </div>
+                <div class="text-center">
+                  <a class="small" href="loginpageclient.html"
+                    >Login as Client</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="#"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
