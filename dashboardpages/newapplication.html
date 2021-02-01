@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <!-- Font Awesome Logo Embedding -->
+    <script
+      src="https://kit.fontawesome.com/4786178612.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-style navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="../loginpages/loginpageclient.html"
+        ><img
+          src="http://www.bdhc.sg/wp-content/themes/bdhc/assets/images/logo.png"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="dashboardhome.html"
+              >Home Page <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              My Applications
+            </a>
+            <div
+              class="dropdown-menu navbar-style"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="#">Approved</a>
+              <a class="dropdown-item" href="#">Rejected</a>
+              <a class="dropdown-item" href="#">Pending</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Contact The High Commission</a>
+          </li>
+        </ul>
+        <div class="ml-auto loginOptions dropdown">
+          <h6
+            class="dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Logged in as: ID Number
+          </h6>
+          <div
+            class="dropdown-menu"
+            id="usernamedropdown"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item" href="#">Change Email</a>
+            <a class="dropdown-item" href="#">Change Password</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content-container">
+      <div class="content-title-container">New Application</div>
+
+      <div class="container-fluid">
+        <form action="">
+          <p class="content-subtitle">
+            Please enter your details. Fields with an asterisk (*) are
+            <em>required</em>
+          </p>
+          <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="workername" class="col-sm-4 col-form-label"
+                  >Worker Name</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="workername"
+                    placeholder="Full name"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="jobtitle" class="col-sm-4 col-form-label"
+                  >Job Title</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jobtitle"
+                    placeholder="Job Title"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="permitno" class="col-sm-4 col-form-label"
+                  >Permit Number</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="permitno"
+                    placeholder="eg. 0 43952324"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="FINno" class="col-sm-4 col-form-label"
+                  >FIN Number</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="FINno"
+                    placeholder="eg. F1235250D"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="expirydate" class="col-sm-4 col-form-label"
+                  >WP Expiry Date</label
+                >
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="expirydate" />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="applicationdate" class="col-sm-4 col-form-label"
+                  >WP Applcation Date</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="applicationdate"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="passportnumber" class="col-sm-4 col-form-label"
+                  >Passport Number</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="passportnumber"
+                    placeholder="Passport Number"
+                  />
+                </div>
+              </div>
+
+              <div class="mt-5 row">
+                <button
+                  type="button"
+                  style="margin-left: 2.5%"
+                  class="btn btn-info"
+                >
+                  <b>Submit</b>
+                </button>
+                <button
+                  type="reset"
+                  style="margin-left: 2%"
+                  class="btn btn-info"
+                >
+                  <b>Reset</b>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

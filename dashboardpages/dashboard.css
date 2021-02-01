@@ -1,0 +1,84 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: 0.75rem;
+  --darkgreen: #179c34;
+  --green: #64be73;
+  --pink: #fc998c;
+  --red: #ff4d40;
+  --logo-url: "http://www.bdhc.sg/wp-content/themes/bdhc/assets/images/logo.png";
+}
+
+.navbar-style {
+  background: var(--pink);
+  background: linear-gradient(
+    90deg,
+    var(--darkgreen),
+    var(--green),
+    var(--pink),
+    var(--red)
+  );
+}
+
+.navbar-style.dropdown-menu {
+    background: var(--green);
+} 
+
+.content-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  margin: 1%;
+  padding: 0.2%;
+  border-radius: 15px;
+
+}
+
+.content-title-container {
+  font-size: 1.7rem;
+  padding: 1%;
+  font-weight: 550;
+  color: var(--darkgreen);
+  text-align: center;
+}
+
+.content-subtitle{
+    text-align: center;
+    color: var(--green);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    margin: 2%;
+}
+
+.card-title{
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--darkgreen);
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.card .btn{
+    background-color: var(--darkgreen);
+}
+
+.card .btn:hover{
+    background-color: var(--green);
+    border: solid;
+}
+
+.table-title{
+    font-size: 1.4rem;
+  padding: 1%;
+  color: var(--darkgreen);
+  text-align: center;
+}
+
+
+
