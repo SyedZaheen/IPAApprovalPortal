@@ -20,15 +20,14 @@
 }
 
 .navbar-style.dropdown-menu {
-    background: var(--green);
-} 
+  background: var(--green);
+}
 
 .content-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   margin: 1%;
   padding: 0.2%;
   border-radius: 15px;
-
 }
 
 .content-title-container {
@@ -39,46 +38,52 @@
   text-align: center;
 }
 
-.content-subtitle{
-    text-align: center;
-    color: var(--green);
+.content-subtitle {
+    margin-top: 10px;
+  text-align: center;
+  color: var(--green);
 }
 
-.flex-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
-    text-align: center;
-    height: 300px;
-    width: 300px;
-    margin: 2%;
+  text-align: center;
+  height: 300px;
+  width: 300px;
+  margin: 2%;
 }
 
-.card-title{
-    font-family: 'Times New Roman', Times, serif;
-    color: var(--darkgreen);
-    font-weight: 900;
-    font-size: 2rem;
+.card-title {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--darkgreen);
+  font-weight: 900;
+  font-size: 2rem;
 }
 
-.card .btn{
-    background-color: var(--darkgreen);
+.card .btn {
+  background-color: var(--darkgreen);
 }
 
-.card .btn:hover{
-    background-color: var(--green);
-    border: solid;
+.card .btn:hover {
+  background-color: var(--green);
+  border: solid;
 }
 
-.table-title{
-    font-size: 1.4rem;
+.table-title {
+  font-size: 1.4rem;
   padding: 1%;
   color: var(--darkgreen);
   text-align: center;
 }
 
+.upload-doc{
+    padding: 3% 1%;
+}
 
-
+.page-fill{
+    height: 50px;
+}

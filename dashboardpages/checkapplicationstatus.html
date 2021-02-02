@@ -99,61 +99,211 @@
       <div class="content-title-container text-center">Application Status</div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="content-container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-            molestias facilis ut quibusdam porro dicta fugit illo debitis
-            reprehenderit est eaque, dolorem quae delectus odit dolores aut quos
-            minima voluptate.
-          </div>
+    <div class="content-container">
+      <div class="container-fluid">
+        <div class="table-title">Search Menu</div>
+        <div class="content-subtitle">
+          If you choose to search by WP No. or FIN no. the search field should
+          be an exact match. You need not fill in all fields.
         </div>
-        <div class="col-md-4">
-          <div class="content-container">
-            <div class="table-title">
-                Approved
+        <form action="">
+          <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="wpnumber" class="col-sm-4 col-form-label"
+                  >Permit Number</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="wpnumber"
+                    placeholder="eg. 0 43952324"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="finnumber" class="col-sm-4 col-form-label"
+                  >FIN Number</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="finnumber"
+                    placeholder="eg. F2830123D"
+                  />
+                </div>
+              </div>
             </div>
-            <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Application Number</th>
-                    <th scope="col">Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
 
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+            <!-- Column 2 -->
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="fromdate" class="col-sm-4 col-form-label"
+                  >From date</label
+                >
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="fromdate" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="todate" class="col-sm-4 col-form-label"
+                  >To date</label
+                >
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="todate" />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="content-container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-            molestias facilis ut quibusdam porro dicta fugit illo debitis
-            reprehenderit est eaque, dolorem quae delectus odit dolores aut quos
-            minima voluptate.
+          <div class="row justify-content-center mt-2 mb-2">
+            <button type="button" class="btn btn-info m-3">
+              <b>Submit</b>
+            </button>
+            <button type="reset" class="btn btn-info btn-form m-3 mr-4">
+              <b>Reset</b>
+            </button>
           </div>
-        </div>
+        </form>
       </div>
+    </div>
+
+    <div class="content-container">
+      <form action="">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="form-group col-md-6 m-2">
+              <label class="content-subtitle" for="formControlSelect1"
+                ><b>Now showing last -</b></label
+              >
+              <select class="form-control" id="formControlSelect1">
+                <option>10 applications</option>
+                <option>30 applications</option>
+                <option>50 applications</option>
+                <option>70 applications</option>
+                <option>90 applications</option>
+              </select>
+              
+            </div>
+            <nav aria-label="Page navigation example" class="ml-auto mt-4 mr-3">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+          </div>
+        </div>
+      </form>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Serial No. of High Commision</th>
+            <th scope="col">Permit Number</th>
+            <th scope="col">FIN Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+            <th scope="col">Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>01763045</td>
+            <td>0 6182733</td>
+            <td>G7209133L</td>
+            <td>Rajibul Kashim Bin Rahman R.</td>
+            <td>APPROVED</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>02332355</td>
+            <td>0 1234564</td>
+            <td>G7234533L</td>
+            <td>Syed Mujib Sakib Mohammed</td>
+            <td>REJECTED</td>
+            <td>No payment submitted</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
