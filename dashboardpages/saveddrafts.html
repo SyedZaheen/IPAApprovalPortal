@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <!-- Font Awesome Logo Embedding -->
+    <script
+      src="https://kit.fontawesome.com/4786178612.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-style navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="../loginpages/loginpageclient.html"
+        ><img
+          src="http://www.bdhc.sg/wp-content/themes/bdhc/assets/images/logo.png"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="dashboardhome.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              My Applications
+            </a>
+            <div
+              class="dropdown-menu navbar-style"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="newapplication.html">New Application</a>
+              <a class="dropdown-item" href="saveddrafts.html">Saved Application Drafts</a>
+              <a class="dropdown-item" href="checkapplicationstatus.html">Submitted Applications</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">Contact The High Commission</a>
+          </li>
+        </ul>
+        <div class="ml-auto loginOptions dropdown">
+            <h6
+              class="dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Logged in as: ID Number
+            </h6>
+            <div
+              class="dropdown-menu"
+              id="usernamedropdown"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="#">Change Email</a>
+              <a class="dropdown-item" href="#">Change Password</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Sign Out</a>
+            </div>
+          </div>
+      </div>
+    </nav>
+
+    <div class="content-container">
+        <div class="content-title-container">Saved Drafts</div>
+    </div>
+
+    <div class="content-container p-4">
+        <table class="table">
+            <thead class="table-success">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date Created</th>
+                <th scope="col">Date Last Modified</th>
+                <th scope="col">Name of applicant</th>
+                <th scope="col">Progress</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>11 / 08 / 2021</td>
+                <td>12 / 08 / 2021</td>
+                <td>Sheikh Sardar Chowdhury</td>
+                <td><div class="container">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 33%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        33%
+                      </div>
+                    </div>
+                  </div></td>
+                <td><a href="#"><i class="far fa-edit"></i></a></td>
+                <td><a href="#"><i class="far fa-trash-alt"></i></a></td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>08 / 07 / 2021</td>
+                <td>20 / 11 / 2021</td>
+                <td>Syed Mohammed Shakib Hasan</td>
+                <td><div class="container">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 66%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        66%
+                      </div>
+                    </div>
+                  </div></td>
+                <td><a href="#"><i class="far fa-edit"></i></a></td>
+                <td><a href="#"><i class="far fa-trash-alt"></i></a></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

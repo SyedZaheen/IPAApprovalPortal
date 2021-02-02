@@ -61,13 +61,21 @@
               class="dropdown-menu navbar-style"
               aria-labelledby="navbarDropdown"
             >
-              <a class="dropdown-item" href="#">Approved</a>
-              <a class="dropdown-item" href="#">Rejected</a>
-              <a class="dropdown-item" href="#">Pending</a>
+              <a class="dropdown-item" href="newapplication.html"
+                >New Application</a
+              >
+              <a class="dropdown-item" href="saveddrafts.html"
+                >Saved Application Drafts</a
+              >
+              <a class="dropdown-item" href="checkapplicationstatus.html"
+                >Submitted Applications</a
+              >
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Contact The High Commission</a>
+            <a class="nav-link active" href="about.html"
+              >Contact The High Commission</a
+            >
           </li>
         </ul>
         <div class="ml-auto loginOptions dropdown">
@@ -96,15 +104,18 @@
       </div>
     </nav>
     <div class="content-container">
-      <div class="content-title-container text-center">Application Status</div>
+      <div class="content-title-container text-center">
+        Submitted Applications
+      </div>
     </div>
 
     <div class="content-container">
       <div class="container-fluid">
         <div class="table-title">Search Menu</div>
         <div class="content-subtitle">
-          If you choose to search by WP No. or FIN no. the search field should
-          be an exact match. You need not fill in all fields.
+          If you choose to search by the permit number or FIN number, the number
+          and the search input should be an exact match. You need not fill in
+          all fields.
         </div>
         <form action="">
           <div class="row">
@@ -134,6 +145,19 @@
                     id="finnumber"
                     placeholder="eg. F2830123D"
                   />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="formControlSelect2" class="col-sm-4 col-form-label"
+                  >Status</label
+                >
+                <div class="col-sm-10">
+                  <select class="form-control" id="formControlSelect2">
+                    <option>- Any Status -</option>
+                    <option>APPROVED</option>
+                    <option>REJECTED</option>
+                    <option>PENDING</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -170,9 +194,10 @@
       </div>
     </div>
 
-    <div class="content-container">
+    <div class="content-container p-2">
       <form action="">
         <div class="container-fluid">
+          <div class="table-title"><b>Search results</b></div>
           <div class="row">
             <div class="form-group col-md-6 m-2">
               <label class="content-subtitle" for="formControlSelect1"
@@ -185,25 +210,30 @@
                 <option>70 applications</option>
                 <option>90 applications</option>
               </select>
-              
             </div>
             <nav aria-label="Page navigation example" class="ml-auto mt-4 mr-3">
-                <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-              </nav>
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#">Previous</a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </form>
       <table class="table table-hover">
-        <thead>
+        <thead class="table-success">
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Serial No. of High Commision</th>
+            <th scope="col">Serial No of The High Commision</th>
             <th scope="col">Permit Number</th>
             <th scope="col">FIN Number</th>
             <th scope="col">Name</th>
@@ -218,7 +248,7 @@
             <td>0 6182733</td>
             <td>G7209133L</td>
             <td>Rajibul Kashim Bin Rahman R.</td>
-            <td>APPROVED</td>
+            <td><span class="approved">APPROVED</span></td>
             <td>-</td>
           </tr>
           <tr>
@@ -227,7 +257,7 @@
             <td>0 1234564</td>
             <td>G7234533L</td>
             <td>Syed Mujib Sakib Mohammed</td>
-            <td>REJECTED</td>
+            <td><span class="rejected">REJECTED</span></td>
             <td>No payment submitted</td>
           </tr>
           <tr>
