@@ -105,9 +105,7 @@
     </nav>
 
     <div class="content-container">
-      <div class="content-title-container">
-        New Application - Upload Payment Slip
-      </div>
+      <div class="content-title-container">New Application - Payment</div>
       <div class="container">
         <div class="progress">
           <div
@@ -118,69 +116,203 @@
             aria-valuemin="0"
             aria-valuemax="100"
           >
-            3. Upload your payment slip
+            3. Payment
           </div>
+        </div>
+      </div>
+      <div class="container mt-4 paymentselect">
+        <div class="form-check my-2">
+          <input
+            onclick="togglePurchaseDiv()"
+            class="form-check-input"
+            type="radio"
+            name="toggleRadios"
+            id="toggleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="toggleRadios2">
+            Pay in bulk with another application in future*
+          </label>
+        </div>
+        <div class="form-check my-2">
+          <input
+            onclick="togglePurchaseDiv()"
+            class="form-check-input"
+            type="radio"
+            name="toggleRadios"
+            id="toggleRadios1"
+            value="option1"
+            checked
+          />
+          <label class="form-check-label" for="toggleRadios1">
+            Pay for this application now (together in bulk with selected past
+            applications, if any)
+          </label>
         </div>
       </div>
 
       <div class="container-fluid">
         <form action="">
-          <p class="content-subtitle">
-            Please upload your payment slip. It must be in .pdf,.png or .jpeg
-            format, and be smaller in size than <b>5MB</b>.
-          </p>
-          <div class="form-group container">
-            <label for="paymentamount" class="col-form-label"
-              >Payment Amount</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="paymentamount"
-              placeholder="Payment amount in SGD"
-            />
-          </div>
-          <div class="form-group container">
-            <label for="paymentdate" class="col-form-label">Payment Date</label>
+          <div class="container mt-3">
+            <div id="toggleDiv">
+              <p class="content-subtitle my-4">
+                Please upload your payment slip for your application(s). It must
+                be in .pdf,.png or .jpeg format, and be smaller in size than
+                <b>5MB</b>. Check if the correct amount is being payed and the
+                reciept is legible. <em>If payment is not acceptable, the entire applcation is void.</em>
+              </p>
+              <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-6">
+                  <div class="form-group container col-md-8">
+                    <label for="paymentamount" class="col-form-label"
+                      >Payment Amount</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="paymentamount"
+                      placeholder="Payment amount in SGD"
+                    />
+                  </div>
+                  <div class="form-group container col-md-8">
+                    <label for="transactionID" class="col-form-label"
+                      >Transaction ID</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="transactionID"
+                      placeholder="Transaction ID on your payment slip"
+                    />
+                  </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="col-md-6">
+                  <div class="form-group container col-md-8">
+                    <label for="paymentdate" class="col-form-label"
+                      >Payment Date</label
+                    >
 
-            <input type="date" class="form-control" id="paymentdate" />
-          </div>
-
-          <div class="container upload-doc">
-            <div class="input-group">
-              <div class="custom-file">
-                <input
-                  type="file"
-                  class="custom-file-input"
-                  id="inputGroupFile04"
-                />
-                <label class="custom-file-label" for="inputGroupFile04"
-                  >Choose file for upload</label
-                >
+                    <input type="date" class="form-control" id="paymentdate" />
+                  </div>
+                  <div class="form-group container col-md-8">
+                    <label for="selectPaymentType" class="col-form-label"
+                      >Payment Type</label
+                    >
+                    <div class="">
+                      <select class="form-control" id="selectPaymentType">
+                        <option>- Select Payment Type -</option>
+                        <option>MASTER/VISA</option>
+                        <option>NETS</option>
+                        <option>BANK TRANSFER</option>
+                        <option>CASH DEPOSIT</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="reset">
-                  Clear
-                </button>
+              <div id="upload-doc">
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input"
+                      id="inputGroupFile04"
+                    />
+                    <label class="custom-file-label" for="inputGroupFile04"
+                      >Choose file for upload</label
+                    >
+                  </div>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="reset">
+                      Clear
+                    </button>
+                  </div>
+                </div>
+                <div class="table-title content-title-container">
+                  Applications pending payment
+                </div>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class="table-success">
+                      <tr>
+                        <th scope="col">Submit</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Date Created</th>
+                        <th scope="col">Date Last Modified</th>
+                        <th scope="col">Name of applicant</th>
+                        <th scope="col">Payment Status</th>
+                        <th scope="col">Edit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td align="center">
+                          <input type="checkbox" />
+                        </td>
+                        <th scope="row">1</th>
+                        <td>11 / 08 / 2021</td>
+                        <td>12 / 08 / 2021</td>
+                        <td>Sheikh Sardar Chowdhury</td>
+                        <td>NOT SUBMITTED</td>
+                        <td>
+                          <a href="#"><i class="far fa-edit"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center"><input type="checkbox" /></td>
+                        <th scope="row">2</th>
+                        <td>08 / 07 / 2021</td>
+                        <td>20 / 11 / 2021</td>
+                        <td>Syed Mohammed Shakib Hasan</td>
+                        <td>NOT SUBMITTED</td>
+                        <td>
+                          <a href="#"><i class="far fa-edit"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
         </form>
+
+        <p class="container small">
+          *Do note that if you select this option, you cannot submit your
+          application for approval now, and will have to save as completed
+          draft. You can pay for it together with another application and submit
+          in the future
+        </p>
         <div class="mt-5 p-3 row justify-content-center">
-          <button type="button" class="btn btn-info mr-1">
-            <b>Save and submit</b>
+          <button id="submit-btn" type="button" class="btn btn-info mr-1">
+            Save and submit
           </button>
           <button
+            id="previous-btn"
             type="button"
             class="btn btn-info ml-1"
             onclick="window.location.href = 'uploaddocument.html';"
           >
-            <b>Previous page</b>
+            Previous page
           </button>
         </div>
       </div>
     </div>
-
+    <script>
+      function togglePurchaseDiv() {
+        var x = document.getElementById("toggleDiv");
+        var y = document.getElementById("submit-btn");
+        if (document.getElementById("toggleRadios2").checked === true) {
+          x.style.display = "none";
+          y.innerHTML = "Save as completed draft";
+        } else {
+          x.style.display = "block";
+          y.innerHTML = "Save and Submit";
+        }
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>

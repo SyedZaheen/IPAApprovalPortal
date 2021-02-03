@@ -51,7 +51,7 @@
 }
 
 #status-btn{
-    background-color: rgb(41, 155, 221);
+    background-color: lightskyblue;
 }
 
 
@@ -87,15 +87,20 @@
 
 .approved{
     border-radius: 2px;
-    background: lightpink;
+    background: lightgreen;
 }
 
 .rejected{
     border-radius: 2px;
-    background:lightgreen;
+    background:lightpink;
 }
 
-.upload-doc{
+.pending{
+    border-radius: 2px;
+    background: lightskyblue;
+}
+
+#upload-doc{
     padding: 3% 1%;
 }
 
@@ -111,4 +116,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.paymentselect{
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+#submit-btn, #previous-btn{
+    font-weight: 700;
+    
 }

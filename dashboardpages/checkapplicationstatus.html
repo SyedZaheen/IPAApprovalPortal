@@ -113,9 +113,9 @@
       <div class="container-fluid">
         <div class="table-title">Search Menu</div>
         <div class="content-subtitle">
-          If you choose to search by the permit number or FIN number, the number
-          and the search input should be an exact match. You need not fill in
-          all fields.
+          If you choose to search by the WP number or FIN number, the number and
+          the search input should be an exact match. You need not fill in all
+          fields.
         </div>
         <form action="">
           <div class="row">
@@ -123,7 +123,7 @@
             <div class="col-md-6">
               <div class="form-group row">
                 <label for="wpnumber" class="col-sm-4 col-form-label"
-                  >Permit Number</label
+                  >WP Number</label
                 >
                 <div class="col-sm-10">
                   <input
@@ -164,6 +164,14 @@
 
             <!-- Column 2 -->
             <div class="col-md-6">
+              <div class="form-group row">
+                <label for="name" class="col-sm-4 col-form-label"
+                  >Name</label
+                >
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="name" placeholder="Search by name"/>
+                </div>
+              </div>
               <div class="form-group row">
                 <label for="fromdate" class="col-sm-4 col-form-label"
                   >From date</label
@@ -229,111 +237,113 @@
           </div>
         </div>
       </form>
-      <table class="table table-hover">
-        <thead class="table-success">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Serial No of The High Commision</th>
-            <th scope="col">Permit Number</th>
-            <th scope="col">FIN Number</th>
-            <th scope="col">Name</th>
-            <th scope="col">Status</th>
-            <th scope="col">Reason</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>01763045</td>
-            <td>0 6182733</td>
-            <td>G7209133L</td>
-            <td>Rajibul Kashim Bin Rahman R.</td>
-            <td><span class="approved">APPROVED</span></td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>02332355</td>
-            <td>0 1234564</td>
-            <td>G7234533L</td>
-            <td>Syed Mujib Sakib Mohammed</td>
-            <td><span class="rejected">REJECTED</span></td>
-            <td>No payment submitted</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">7</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">8</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">9</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">10</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="table-success">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Date Submitted</th>
+              <th scope="col">Application Number</th>
+              <th scope="col">FIN Number</th>
+              <th scope="col">Name</th>
+              <th scope="col">Status</th>
+              <th scope="col">Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>12 / 07 / 21</td>
+              <td>46182733</td>
+              <td>G7209467L</td>
+              <td>Rajibul Kashim Bin Rahman R.</td>
+              <td><span class="approved">APPROVED</span></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>15 / 11 / 20</td>
+              <td>81234564</td>
+              <td>G7234533L</td>
+              <td>Syed Mujib Sakib Mohammed</td>
+              <td><span class="rejected">REJECTED</span></td>
+              <td>Payment is not accepted</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>

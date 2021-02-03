@@ -18,7 +18,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="dashboard.css" />
+    <link 
+    rel="stylesheet" 
+    href="dashboard.css"
+    />
     <title>Dashboard</title>
   </head>
   <body>
@@ -38,6 +41,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="navbar-brand">IPA ADMIN PORTAL</div>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -61,79 +65,48 @@
               class="dropdown-menu navbar-style"
               aria-labelledby="navbarDropdown"
             >
-              <a class="dropdown-item" href="newapplication.html">New Application</a>
-              <a class="dropdown-item" href="saveddrafts.html">Saved Application Drafts</a>
-              <a class="dropdown-item" href="checkapplicationstatus.html">Submitted Applications</a>
+              <a class="dropdown-item" href="newapplication.html"
+                >New Application</a
+              >
+              <a class="dropdown-item" href="saveddrafts.html"
+                >Saved Application Drafts</a
+              >
+              <a class="dropdown-item" href="checkapplicationstatus.html"
+                >Submitted Applications</a
+              >
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="about.html">Contact The High Commission</a>
+            <a class="nav-link active" href="about.html"
+              >Contact The High Commission</a
+            >
           </li>
         </ul>
         <div class="ml-auto loginOptions dropdown">
-            <h6
-              class="dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Logged in as: ID Number
-            </h6>
-            <div
-              class="dropdown-menu"
-              id="usernamedropdown"
-              aria-labelledby="navbarDropdown"
-            >
-              <a class="dropdown-item" href="#">Change Email</a>
-              <a class="dropdown-item" href="#">Change Password</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Sign Out</a>
-            </div>
+          <h6
+            class="dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Logged in as: ID Number
+          </h6>
+          <div
+            class="dropdown-menu"
+            id="usernamedropdown"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item" href="#">Change Email</a>
+            <a class="dropdown-item" href="#">Change Password</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sign Out</a>
           </div>
+        </div>
       </div>
     </nav>
-
-    <div class="content-container">
-      <div class="content-title-container text-center">
-        Welcome to the IPA Verification Portal
-      </div>
-    </div>
-
-    <div class="flex-container">
-      <div class="card content-container">
-        <div class="card-body">
-          <div class="card-title pb-2">Apply now to verify your IPA</div>
-          <div class="card-text">
-            Simply enter your details, upload your IPA and payment slip to complete your application
-          </div>
-          <hr />
-          <a href="newapplication.html" class="btn">Apply Now</a>
-        </div>
-      </div>
-      <div class="card content-container">
-        <div class="card-body">
-          <div class="card-title pb-2">Status of most recent application</div>
-          <div class="card-text content-subtitle"> <b>Application Number: 821974302</b> </div>
-          <div class="btn mt-3" id="status-btn">PENDING</div>
-          <hr />
-          <a href="#" class="btn">Refresh status</a>
-        </div>
-      </div>
-      <div class="card content-container">
-        <div class="card-body">
-          <div class="card-title pb-2">Check status of all applications</div>
-          <div class="card-text">
-            Query the a table to attain the status of all your submitted applications
-          </div>
-          <hr />
-          <a href="checkapplicationstatus.html" class="btn">Check status</a>
-        </div>
-      </div>
-    </div>
-    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
