@@ -18,11 +18,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <link 
-    rel="stylesheet" 
-    href="dashboard.css"
-    />
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="admin.css" />
+    <title>Admin</title>
   </head>
   <body>
     <nav class="navbar navbar-style navbar-expand-lg navbar-light">
@@ -44,10 +41,27 @@
       <div class="navbar-brand">IPA ADMIN PORTAL</div>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="dashboardhome.html"
-              >Home <span class="sr-only">(current)</span></a
+          <li class="nav-item active dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
             >
+              Admin Portal Users Management
+            </a>
+            <div
+              class="dropdown-menu navbar-style"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="adduser.html">Add Admin User</a>
+              <a class="dropdown-item" href="viewedituser.html"
+                >View/Edit Admin Users</a
+              >
+            </div>
           </li>
           <li class="nav-item active dropdown">
             <a
@@ -59,27 +73,64 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              My Applications
+              Customer Accounts
             </a>
             <div
               class="dropdown-menu navbar-style"
               aria-labelledby="navbarDropdown"
             >
-              <a class="dropdown-item" href="newapplication.html"
-                >New Application</a
+              <a class="dropdown-item" href="addcustomer.html"
+                >Add Customer Account</a
               >
-              <a class="dropdown-item" href="saveddrafts.html"
-                >Saved Application Drafts</a
-              >
-              <a class="dropdown-item" href="checkapplicationstatus.html"
-                >Submitted Applications</a
+              <a class="dropdown-item" href="vieweditcustomer.html"
+                >View/Edit Customer Accounts</a
               >
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="about.html"
-              >Contact The High Commission</a
+          <li class="nav-item active dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
             >
+              Customer Applications
+            </a>
+            <div
+              class="dropdown-menu navbar-style"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="viewpending.html"
+                >Pending Applications</a
+              >
+              <a class="dropdown-item" href="viewresolved.html"
+                >Resolved Applications</a
+              >
+            </div>
+          </li>
+          <li class="nav-item active dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Customer Payment
+            </a>
+            <div
+              class="dropdown-menu navbar-style"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="viewpayments.html"
+                >View Payments</a
+              >
+            </div>
           </li>
         </ul>
         <div class="ml-auto loginOptions dropdown">
@@ -92,7 +143,7 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Logged in as: ID Number
+            Logged in as: Super Admin
           </h6>
           <div
             class="dropdown-menu"
