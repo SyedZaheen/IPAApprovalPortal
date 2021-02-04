@@ -159,6 +159,333 @@
       </div>
     </nav>
 
+    <div class="content-container">
+      <div class="content-title-container">
+        View and Edit Pending Applications
+      </div>
+    </div>
+
+    <div class="content-container">
+      <div class="container-fluid">
+        <div class="table-title"><b>Search Menu</b></div>
+
+        <form action="">
+          <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="WPnumber" class="col-sm-4 col-form-label"
+                  >WP Number</label
+                >
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="WPnumber" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="serialnumber" class="col-sm-4 col-form-label"
+                  >Serial Number</label
+                >
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="serialnumber" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="UENnumber" class="col-sm-4 col-form-label"
+                  >Company UEN Number</label
+                >
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="UENnumber" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="Name" class="col-sm-4 col-form-label"
+                  >Worker Name</label
+                >
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="Name" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="fromdate" class="col-sm-4 col-form-label"
+                  >From date</label
+                >
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="fromdate" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="todate" class="col-sm-4 col-form-label"
+                  >To date</label
+                >
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="todate" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-2 mb-2">
+            <button type="button" class="btn btn-info m-3">
+              <b>Submit</b>
+            </button>
+            <button type="reset" class="btn btn-info btn-form m-3 mr-4">
+              <b>Reset</b>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="content-container p-4">
+      <form action="">
+        <div class="container-fluid">
+          <div class="table-title"><b>Search results</b></div>
+          <div class="row">
+            <div class="form-group col-md-3 m-2">
+              <label class="content-subtitle" for="formControlSelect1"
+                ><b>Now showing last -</b></label
+              >
+              <select class="form-control" id="formControlSelect1">
+                <option>10 applications</option>
+                <option>30 applications</option>
+                <option>50 applications</option>
+                <option>70 applications</option>
+                <option>90 applications</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3 m-2">
+              <label class="content-subtitle" for="formControlSelect2"
+                ><b>Sort By -</b></label
+              >
+              <select class="form-control" id="formControlSelect2">
+                <option>Most Recent</option>
+                <option>Least Recent</option>
+              </select>
+            </div>
+            
+            <nav aria-label="Page navigation example" class="ml-auto mt-4 mr-3">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#">Previous</a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </form>
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="table-success">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Date Submitted</th>
+              <th scope="col">Serial Number</th>
+              <th scope="col">UEN Number</th>
+              <th scope="col">Worker Name</th>
+              <th scope="col">WP Number</th>
+              <th scope="col">FIN Number</th>
+              <th scope="col">IPA</th>
+              <th scope="col">Details</th>
+
+              <th scope="col">Payment Slip</th>
+              <th scope="col">Payment Info</th>
+              <th scope="col">Declare Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>11 / 08 / 2021</td>
+              <td>173634</td>
+              <td>T08GA0035G</td>
+              <td>Syed Mohammed Mujib Hakim</td>
+              <td>46182733</td>
+              <td>G7209467L</td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-alt"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td><div class="d-flex justify-content-center">
+                <a href="#"><i class="far fa-edit"></i></a>
+              </div></td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>11 / 08 / 2021</td>
+              <td>193024</td>
+              <td>T08GA0035G</td>
+              <td>Syed Mohammed Mujib Hakim</td>
+              <td>46182733</td>
+              <td>G7209467L</td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-alt"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td><div class="d-flex justify-content-center">
+                <a href="#"><i class="far fa-edit"></i></a>
+              </div></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
