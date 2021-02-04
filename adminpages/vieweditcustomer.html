@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <!-- Font Awesome Logo Embedding -->
+    <script
+      src="https://kit.fontawesome.com/4786178612.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="admin.css" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-style navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="../loginpages/loginpageclient.html"
+        ><img
+          src="http://www.bdhc.sg/wp-content/themes/bdhc/assets/images/logo.png"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-brand">IPA ADMIN PORTAL</div>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Admin Portal Users Management
+            </a>
+            <div
+              class="dropdown-menu navbar-style"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="adduser.html">Add Admin User</a>
+              <a class="dropdown-item" href="viewedituser.html"
+                >View/Edit Admin Users</a
+              >
+            </div>
+          </li>
+          <li class="nav-item active dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Customer Accounts
+            </a>
+            <div
+              class="dropdown-menu navbar-style"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="addcustomer.html"
+                >Add Customer Account</a
+              >
+              <a class="dropdown-item" href="vieweditcustomer.html"
+                >View/Edit Customer Accounts</a
+              >
+            </div>
+          </li>
+          <li class="nav-item active dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Customer Applications
+            </a>
+            <div
+              class="dropdown-menu navbar-style"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="viewpending.html"
+                >Pending Applications</a
+              >
+              <a class="dropdown-item" href="viewresolved.html"
+                >Resolved Applications</a
+              >
+            </div>
+          </li>
+          <li class="nav-item active dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Customer Payment
+            </a>
+            <div
+              class="dropdown-menu navbar-style"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="viewpayments.html"
+                >View Payments</a
+              >
+            </div>
+          </li>
+        </ul>
+        <div class="ml-auto loginOptions dropdown">
+          <h6
+            class="dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Logged in as: Super Admin
+          </h6>
+          <div
+            class="dropdown-menu"
+            id="usernamedropdown"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item" href="#">Change Email</a>
+            <a class="dropdown-item" href="#">Change Password</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content-container">
+      <div class="content-title-container">View or Edit Customer Accounts</div>
+    </div>
+
+    <div class="content-container">
+      <div class="container-fluid">
+        <div class="table-title"><b>Search Menu</b></div>
+
+        <form action="">
+          <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="UENNumber" class="col-sm-4 col-form-label"
+                  >Company UEN Number</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="UENNumber"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="finnumber" class="col-sm-4 col-form-label"
+                  >Company Name</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="finnumber"
+                    
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="fromdate" class="col-sm-4 col-form-label"
+                  >From date</label
+                >
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="fromdate" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="todate" class="col-sm-4 col-form-label"
+                  >To date</label
+                >
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="todate" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-2 mb-2">
+            <button type="button" class="btn btn-info m-3">
+              <b>Submit</b>
+            </button>
+            <button type="reset" class="btn btn-info btn-form m-3 mr-4">
+              <b>Reset</b>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="content-container p-4">
+      <form action="">
+        <div class="container-fluid">
+          <div class="table-title"><b>Search results</b></div>
+          <div class="row">
+            <div class="form-group col-md-6 m-2">
+              <label class="content-subtitle" for="formControlSelect1"
+                ><b>Now showing last -</b></label
+              >
+              <select class="form-control" id="formControlSelect1">
+                <option>10 applications</option>
+                <option>30 applications</option>
+                <option>50 applications</option>
+                <option>70 applications</option>
+                <option>90 applications</option>
+              </select>
+            </div>
+            <nav aria-label="Page navigation example" class="ml-auto mt-4 mr-3">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#">Previous</a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </form>
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="table-success">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Date Account Created</th>
+              <th scope="col">UEN Number</th>
+              <th scope="col">Company Name</th>
+              <th scope="col">No. of submissions</th>
+              <th scope="col">Further Details</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>11 / 08 / 2021</td>
+              <td>T08GA0035G</td>
+              <td>Company Name Pte. Ltd.</td>
+              <td>234</td>
+              <td class="d-flex justify-content-center">
+                <a href="#"><i class="fas fa-info-circle"></i></a>
+              </td>
+              <td>
+                <a href="#"><i class="far fa-edit"></i></a>
+              </td>
+              <td>
+                <a href="#"><i class="far fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>08 / 07 / 2021</td>
+              <td>F12FT12012T</td>
+              <td>That Company Ltd</td>
+              <td>12</td>
+              <td class="d-flex justify-content-center">
+                <a href="#"><i class="fas fa-info-circle"></i></a>
+              </td>
+              <td>
+                <a href="#"><i class="far fa-edit"></i></a>
+              </td>
+              <td>
+                <a href="#"><i class="far fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
