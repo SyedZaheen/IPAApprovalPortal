@@ -51,7 +51,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Admin Portal Users Management
+              Admin Users
             </a>
             <div
               class="dropdown-menu navbar-style"
@@ -160,7 +160,7 @@
     </nav>
 
     <div class="content-container">
-      <div class="content-title-container">Add New Customer Account</div>
+      <div class="content-title-container">Add New Administrator User</div>
     </div>
 
     <div class="content-container p-2">
@@ -170,50 +170,53 @@
             <!-- Column 1 -->
             <div class="col-md-6">
               <div class="form-label-group mt-3">
-                <label for="inputCompanyName">Company Name</label>
+                <label for="fullname">Full Name</label>
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Company name"
-                  id="inputCompanyName"
+                  id="fullname"
+                  placeholder="Registered name"
                   required
                   autofocus
                 />
               </div>
               <div class="form-label-group mt-3">
-                <label for="inputCompanyAdress">Company Address</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Company Adress"
-                  id="inputCompanyAdress"
-                  required
-                  autofocus
-                />
+                <label for="formControlSelect2">Department Name</label>
+
+                <select class="form-control" id="formControlSelect2">
+                  <option>- Select Department -</option>
+                  <option>FINANCE</option>
+                  <option>ADMINISTRATION</option>
+                  <option>CUSTOMER SERVICE</option>
+                  <option>IT DEPARTMENT</option>
+                </select>
               </div>
               <div class="form-label-group mt-3">
-                <label for="inputRegistrationNo"
-                  >Company Registration Number (UEN Number)</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Company Registration Number"
-                  id="inputRegistrationNo"
-                  required
-                  autofocus
-                />
+                <label for="formControlSelect2">Role</label>
+
+                <select class="form-control" id="formControlSelect2">
+                  <option>- Select Role -</option>
+                  <option>VET APPLICATIONS</option>
+                  <option>MANAGE FINANCE</option>
+                  <option>IT ADMIN</option>
+                  <option>SUPER ADMIN</option>
+                </select>
               </div>
-              <div class="form-label-group mt-3">
-                <label for="officeNo">Company Office Number</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  placeholder="Office Number"
-                  id="officeNo"
-                  required
-                  autofocus
-                />
+              <div class="form-group mt-3">
+                Permissions:
+                <hr />
+                <label for="permission1">Read Applications</label>
+                <input type="checkbox" id="permission1" />
+                <label for="permission2">Edit Applications</label>
+                <input type="checkbox" id="permission2" />
+                <br />
+                <label for="permission3">Read Customer Info</label>
+                <input type="checkbox" id="permission3" />
+                <label for="permission4">Edit Customer Info</label>
+                <input type="checkbox" id="permission4" />
+                <br/>
+                <label for="permission5">Edit Admin Users and permissions</label>
+                <input type="checkbox" id="permission5" />
               </div>
             </div>
             <!-- Column 2-->
@@ -241,6 +244,17 @@
                 />
               </div>
               <div class="form-label-group mt-3">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Username"
+                  required
+                  autofocus
+                />
+              </div>
+              <div class="form-label-group mt-3">
                 <label for="inputPassword">Password</label>
                 <input
                   type="password"
@@ -263,8 +277,10 @@
             </div>
           </div>
           <div class="d-flex justify-content-center p-3">
-            <button class="btn btn-primary m-2">Add client</button>
-            <button class="btn btn-primary m-2" type="reset">Reset all fields</button>
+            <button class="btn btn-info m-2">Add User</button>
+            <button class="btn btn-info m-2" type="reset">
+              Reset all fields
+            </button>
           </div>
         </div>
       </form>

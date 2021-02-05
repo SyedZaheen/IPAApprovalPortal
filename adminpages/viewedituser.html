@@ -51,7 +51,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Admin Portal Users Management
+              Admin Users 
             </a>
             <div
               class="dropdown-menu navbar-style"
@@ -160,7 +160,7 @@
     </nav>
 
     <div class="content-container">
-      <div class="content-title-container">View or Edit Customer Accounts</div>
+      <div class="content-title-container">View or Edit Admin User Accounts</div>
     </div>
 
     <div class="content-container">
@@ -172,48 +172,44 @@
             <!-- Column 1 -->
             <div class="col-md-6">
               <div class="form-group row">
-                <label for="UENNumber" class="col-sm-4 col-form-label"
-                  >Company UEN Number</label
-                >
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="UENNumber"
-                  />
-                </div>
+                <label for="selectrole" class="col-sm-4 col-form-label">Role</label>
+                <div class="col-sm-10"><select class="form-control" id="selectrole" >
+                  <option>- Any Role -</option>
+                  <option>VET APPLICATIONS</option>
+                  <option>MANAGE FINANCE</option>
+                  <option>IT ADMIN</option>
+                  <option>SUPER ADMIN</option>
+                </select></div>
+                
               </div>
               <div class="form-group row">
-                <label for="finnumber" class="col-sm-4 col-form-label"
-                  >Company Name</label
-                >
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="finnumber"
-                    
-                  />
-                </div>
+                <label for="selectrole" class="col-sm-4 col-form-label">Department</label>
+                <div class="col-sm-10"><select class="form-control" id="formControlSelect2">
+                  <option>- Any Department -</option>
+                  <option>FINANCE</option>
+                  <option>ADMINISTRATION</option>
+                  <option>CUSTOMER SERVICE</option>
+                  <option>IT DEPARTMENT</option>
+                </select></div>
               </div>
             </div>
 
             <!-- Column 2 -->
             <div class="col-md-6">
               <div class="form-group row">
-                <label for="fromdate" class="col-sm-4 col-form-label"
-                  >From date</label
+                <label for="username" class="col-sm-4 col-form-label"
+                  >Username</label
                 >
                 <div class="col-sm-10">
-                  <input type="date" class="form-control" id="fromdate" />
+                  <input type="text" class="form-control" id="username" />
                 </div>
               </div>
               <div class="form-group row">
-                <label for="todate" class="col-sm-4 col-form-label"
-                  >To date</label
+                <label for="realname" class="col-sm-4 col-form-label"
+                  >Registered Name</label
                 >
                 <div class="col-sm-10">
-                  <input type="date" class="form-control" id="todate" />
+                  <input type="text" class="form-control" id="realname" />
                 </div>
               </div>
             </div>
@@ -240,11 +236,11 @@
                 ><b>Now showing last -</b></label
               >
               <select class="form-control" id="formControlSelect1">
-                <option>10 applications</option>
-                <option>30 applications</option>
-                <option>50 applications</option>
-                <option>70 applications</option>
-                <option>90 applications</option>
+                <option>10 Users</option>
+                <option>30 Users</option>
+                <option>50 Users</option>
+                <option>70 Users</option>
+                <option>90 Users</option>
               </select>
             </div>
             <nav aria-label="Page navigation example" class="ml-auto mt-4 mr-3">
@@ -272,10 +268,12 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Date Account Created</th>
-              <th scope="col">UEN Number</th>
-              <th scope="col">Company Name</th>
-              <th scope="col">No. of submissions</th>
-              <th scope="col">Further Details</th>
+              <th scope="col">Username</th>
+              <th scope="col">Registered Name</th>
+              <th scope="col">Department</th>
+              <th scope="col">Role</th>
+              <th scope="col">HP No.</th>
+              <th scope="col">Details</th>
               <th scope="col">Edit</th>
               <th scope="col">Delete</th>
             </tr>
@@ -284,25 +282,29 @@
             <tr>
               <th scope="row">1</th>
               <td>11 / 08 / 2021</td>
-              <td>T08GA0035G</td>
-              <td>Company Name Pte. Ltd.</td>
-              <td>234</td>
+              <td>syed_zakaria</td>
+              <td>Syed Mohammed Zakaria Al-Hady</td>
+              <td>ADMINISTRATION</td>
+              <td>SUPER ADMIN</td>
+              <td>+65 92345678</td>
               <td class="d-flex justify-content-center">
                 <a href="#"><i class="fas fa-info-circle"></i></a>
               </td>
               <td>
-                <a href="#"><i class="far fa-edit"></i></a>
+               <i class="far fa-edit"></i>
               </td>
               <td>
-                <a href="#"><i class="far fa-trash-alt"></i></a>
+                <i class="far fa-trash-alt"></i>
               </td>
             </tr>
             <tr>
               <th scope="row">2</th>
               <td>08 / 07 / 2021</td>
-              <td>F12FT12012T</td>
-              <td>That Company Ltd</td>
-              <td>12</td>
+              <td>syed-md-zaheen</td>
+              <td>Syed M Mosayeeb Al-Hady Zaheen</td>
+              <td>IT DEPARTMENT</td>
+              <td>IT ADMIN</td>
+              <td>+65 83725194</td>
               <td class="d-flex justify-content-center">
                 <a href="#"><i class="fas fa-info-circle"></i></a>
               </td>
@@ -321,9 +323,15 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -339,9 +347,15 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">6</th>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -357,9 +371,15 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">8</th>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -375,9 +395,15 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">10</th>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>

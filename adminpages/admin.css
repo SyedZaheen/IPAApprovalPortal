@@ -127,5 +127,12 @@
 
 #submit-btn, #previous-btn{
     font-weight: 700;
-    
+}
+
+.bulk-group{
+  background-color: #fdfdc5;
+}
+
+.bulk-group2{
+  background-color: rgb(255, 231, 217);
 }

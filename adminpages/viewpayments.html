@@ -51,7 +51,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Admin Portal Users Management
+              Admin Users
             </a>
             <div
               class="dropdown-menu navbar-style"
@@ -160,9 +160,7 @@
     </nav>
 
     <div class="content-container">
-      <div class="content-title-container">
-        View and Edit Pending Applications
-      </div>
+      <div class="content-title-container">View Payments</div>
     </div>
 
     <div class="content-container">
@@ -174,19 +172,19 @@
             <!-- Column 1 -->
             <div class="col-md-6">
               <div class="form-group row">
-                <label for="WPnumber" class="col-sm-4 col-form-label"
-                  >WP Number</label
-                >
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="WPnumber" />
-                </div>
-              </div>
-              <div class="form-group row">
                 <label for="serialnumber" class="col-sm-4 col-form-label"
                   >Serial Number</label
                 >
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="serialnumber" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="transactionID" class="col-sm-4 col-form-label"
+                  >Transaction ID</label
+                >
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="transactionID" />
                 </div>
               </div>
               <div class="form-group row">
@@ -202,11 +200,17 @@
             <!-- Column 2 -->
             <div class="col-md-6">
               <div class="form-group row">
-                <label for="Name" class="col-sm-4 col-form-label"
-                  >Worker Name</label
+                <label for="selectPaymentType" class="col-sm-4 col-form-label"
+                  >Payment Type</label
                 >
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="Name" />
+                  <select class="form-control" id="selectPaymentType">
+                    <option>- Select Payment Type -</option>
+                    <option>MASTER/VISA</option>
+                    <option>NETS</option>
+                    <option>BANK TRANSFER</option>
+                    <option>CASH DEPOSIT</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group row">
@@ -265,7 +269,13 @@
                 <option>Least Recent</option>
               </select>
             </div>
-            
+            <div class="form-group mt-5">
+              <input type="checkbox" name="" id="groupcheckbox" checked />
+              <label for="groupcheckbox"
+                >Group together bulk transactions</label
+              >
+            </div>
+
             <nav aria-label="Page navigation example" class="ml-auto mt-4 mr-3">
               <ul class="pagination">
                 <li class="page-item">
@@ -292,37 +302,44 @@
               <th scope="col">#</th>
               <th scope="col">Date Submitted</th>
               <th scope="col">Serial Number</th>
-              <th scope="col">UEN Number</th>
-              <th scope="col">Worker Name</th>
-              <th scope="col">WP Number</th>
-              <th scope="col">FIN Number</th>
-              <th scope="col">IPA</th>
-              <th scope="col">Details</th>
+              <th scope="col">Transaction ID</th>
+              <th scope="col">Payment Amount(SGD)</th>
+              <th scope="col">Payed For</th>
+              <th scope="col">Payed By</th>
+              <th scope="col">Status</th>
 
               <th scope="col">Payment Slip</th>
               <th scope="col">Payment Info</th>
-              <th scope="col">Declare Status</th>
+              <th scope="col">Change Status</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="bulk-group">
               <th scope="row">1</th>
               <td>11 / 08 / 2021</td>
               <td>173634</td>
               <td>T08GA0035G</td>
-              <td>Syed Mohammed Mujib Hakim</td>
-              <td>46182733</td>
-              <td>G7209467L</td>
+              <td>48</td>
               <td>
-                <div class="d-flex justify-content-center">
-                  <a href="#"><i class="fas fa-file-alt"></i></a>
+                <div class="dropdown">
+                  <div
+                    class="dropdown-toggle"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    4 submissions
+                  </div>
+                  <div class="dropdown-menu">
+                    <p>193024</p>
+                    <p>108729</p>
+                    <p>103647</p>
+                  </div>
                 </div>
               </td>
-              <td>
-                <div class="d-flex justify-content-center">
-                  <a href="#"><i class="fas fa-info-circle"></i></a>
-                </div>
-              </td>
+              <td>N.A.</td>
+              <td><span class="approved">APPROVED</span></td>
               <td>
                 <div class="d-flex justify-content-center">
                   <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
@@ -333,28 +350,21 @@
                   <a href="#"><i class="fas fa-info-circle"></i></a>
                 </div>
               </td>
-              <td><div class="d-flex justify-content-center">
-                <a href="#"><i class="far fa-edit"></i></a>
-              </div></td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="far fa-edit"></i></a>
+                </div>
+              </td>
             </tr>
-            <tr>
-              <th scope="row">1</th>
+            <tr class="bulk-group">
+              <th scope="row">2</th>
               <td>11 / 08 / 2021</td>
               <td>193024</td>
               <td>T08GA0035G</td>
-              <td>Syed Mohammed Mujib Hakim</td>
-              <td>46182733</td>
-              <td>G7209467L</td>
-              <td>
-                <div class="d-flex justify-content-center">
-                  <a href="#"><i class="fas fa-file-alt"></i></a>
-                </div>
-              </td>
-              <td>
-                <div class="d-flex justify-content-center">
-                  <a href="#"><i class="fas fa-info-circle"></i></a>
-                </div>
-              </td>
+              <td>N.A.</td>
+              <td>N.A.</td>
+              <td>173634</td>
+              <td><span class="rejected">REJECTED</span></td>
               <td>
                 <div class="d-flex justify-content-center">
                   <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
@@ -365,93 +375,177 @@
                   <a href="#"><i class="fas fa-info-circle"></i></a>
                 </div>
               </td>
-              <td><div class="d-flex justify-content-center">
-                <a href="#"><i class="far fa-edit"></i></a>
-              </div></td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="far fa-edit"></i></a>
+                </div>
+              </td>
             </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            <tr class="bulk-group">
+              <th scope="row">2</th>
+              <td>11 / 08 / 2021</td>
+              <td>108729</td>
+              <td>T08GA0035G</td>
+              <td>N.A.</td>
+              <td>N.A.</td>
+              <td>173634</td>
+              <td><span class="pending">PENDING</span></td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="far fa-edit"></i></a>
+                </div>
+              </td>
             </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            <tr class="bulk-group">
+              <th scope="row">2</th>
+              <td>11 / 08 / 2021</td>
+              <td>103647</td>
+              <td>T08GA0035G</td>
+              <td>N.A.</td>
+              <td>N.A.</td>
+              <td>173634</td>
+              <td><span class="approved">APPROVED</span></td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="far fa-edit"></i></a>
+                </div>
+              </td>
             </tr>
-            <tr>
+            <tr class="bulk-group2">
               <th scope="row">5</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>15 / 07 / 2021</td>
+              <td>157239</td>
+              <td>P01AE1234F</td>
+              <td>36</td>
+              <td>
+                <div class="dropdown">
+                  <div
+                    class="dropdown-toggle"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    3 submissions
+                  </div>
+                  <div class="dropdown-menu">
+                    <p>107364</p>
+                    <p>123042</p>
+                  </div>
+                </div>
+              </td>
+              <td>N.A.</td>
+              <td><span class="rejected">REJECTED</span></td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="far fa-edit"></i></a>
+                </div>
+              </td>
             </tr>
-            <tr>
+            <tr class="bulk-group2">
               <th scope="row">6</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>15 / 07 / 2021</td>
+              <td>107364</td>
+              <td>P01AE1234F</td>
+              <td>N.A.</td>
+              <td>N.A.</td>
+              <td>157239</td>
+              <td><span class="approved">APPROVED</span></td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="far fa-edit"></i></a>
+                </div>
+              </td>
             </tr>
-            <tr>
+            <tr class="bulk-group2">
               <th scope="row">7</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>15 / 07 / 2021</td>
+              <td>123042</td>
+              <td>P01AE1234F</td>
+              <td>N.A.</td>
+              <td>N.A.</td>
+              <td>157239</td>
+              <td><span class="approved">APPROVED</span></td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="far fa-edit"></i></a>
+                </div>
+              </td>
             </tr>
-            <tr>
+            <tr class="bulk-group">
               <th scope="row">8</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>15 / 07 / 2021</td>
+              <td>157239</td>
+              <td>G91TB0193B</td>
+              <td>12</td>
+              <td>1 submission</td>
+              <td>N.A.</td>
+              <td><span class="pending">PENDING</span></td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <a href="#"><i class="far fa-edit"></i></a>
+                </div>
+              </td>
             </tr>
             <tr>
               <th scope="row">9</th>
