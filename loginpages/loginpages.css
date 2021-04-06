@@ -7,7 +7,7 @@
   --green: #64be73;
   --pink: #fc998c;
   --red: #ff4d40;
-  --logo-url: "http://www.bdhc.sg/wp-content/themes/bdhc/assets/images/logo.png";
+  --logo-url: "../public/images/bangladesh-logo.png";
 }
 
 .login,
@@ -23,7 +23,7 @@
 }
 
 .bg-image-client{
-  background-image: url("https://www.straitstimes.com/sites/default/files/articles/2018/03/12/nm-halimah-1203.jpg");
+  background-image: url("../public/images/Bangladesh-pm-halimah.jpg");
 }
 
 .bg-image-admin{

@@ -5,7 +5,7 @@
   --green: #64be73;
   --pink: #fc998c;
   --red: #ff4d40;
-  --logo-url: "http://www.bdhc.sg/wp-content/themes/bdhc/assets/images/logo.png";
+  --logo-url: "../public/images/bangladesh-logo.png";
 }
 
 .navbar-style {

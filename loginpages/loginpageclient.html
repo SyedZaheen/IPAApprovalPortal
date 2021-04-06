@@ -29,13 +29,18 @@
   <body>
     <div class="container-fluid bg-color">
       <div class="row no-gutter">
-        <div class="d-none d-md-flex col-md-4 col-lg-4 bg-image bg-image-client"></div>
+        <div
+          class="d-none d-md-flex col-md-4 col-lg-4 bg-image bg-image-client"
+        ></div>
         <div class="col-md-8 col-lg-8">
           <div class="login d-flex align-items-center py-5">
             <div class="container">
               <div class="row">
                 <div class="col-md-9 col-lg-8 mx-auto">
-                  <img class="logo pb-3" src="http://www.bdhc.sg/wp-content/themes/bdhc/assets/images/logo.png" />
+                  <img
+                    class="logo pb-3"
+                    src="../public/images/bangladesh-logo.png"
+                  />
                   <h3 class="login-heading">
                     Welcome to the IPA Verification Portal
                   </h3>
@@ -43,7 +48,8 @@
                     Sign in to submit new application
                   </h5>
                   <h6 class="login-heading mb-3">
-                    Don't have an account? <a href="signuppageclient.html">Sign Up</a>!
+                    Don't have an account?
+                    <a href="signuppageclient.html">Sign Up</a>!
                   </h6>
                   <form>
                     <div class="form-label-group">
@@ -55,7 +61,9 @@
                         required
                         autofocus
                       />
-                      <label for="inputCompanyNo">Company Registration No.</label>
+                      <label for="inputCompanyNo"
+                        >Company Registration No.</label
+                      >
                     </div>
 
                     <div class="form-label-group">
@@ -88,7 +96,9 @@
                       Sign in
                     </button>
                     <div class="text-center">
-                      <a class="small" href="resetpassword.html">Reset password</a>
+                      <a class="small" href="resetpassword.html"
+                        >Reset password</a
+                      >
                     </div>
                     <div class="text-center">
                       <a class="small" href="loginpageadmin.html"
@@ -105,7 +115,11 @@
     </div>
 
     <!-- Custom JavaScript -->
-    <script src="#"></script>
+    <script>
+      do {
+        var confirmation = confirm("The following is simply a demo website with no functionality attached. \nThis demo may not match the final site \nClick the sign/log in/up buttons with no credentials to navigate the site. \nPress OK to continue.")
+      } while (!confirmation);
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
